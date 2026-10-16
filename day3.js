@@ -69,11 +69,45 @@ console.log(max_number([20,-7,1,0,-15]));
 //6
 
 const toCapitalizer = (text) => {
-    return text.toUpperCase();
+    return text[0].toUpperCase() + text.slice(1);
 };
 
 console.log(toCapitalizer("kigali"));
-console.log(toCapitalizer("hello word"));
-console.log(toCapitalizer("welcame to this page "));
+console.log(toCapitalizer("hello"));
+console.log(toCapitalizer("welcame "));
+//7
+const countVowels = (text) => {
+    let count = 0;
+    text = text.toLowerCase();
+
+    for (let i = 0; i < text.length; i++) {
+        if (
+            text[i] === "a" ||
+            text[i] === "e" ||
+            text[i] === "i" ||
+            text[i] === "o" ||
+            text[i] === "u"
+        ) {
+            count++;
+        }
+    }
+
+    return count;
+};
+
+console.log(countVowels("kigali"));       
+console.log(countVowels("EDUCATION"));    
+console.log(countVowels("rhythm"));  
+
+//8
+const isPalindrome = (word) => {
+    word = word.toLowerCase();
+
+    return word === word.split("").reverse().join("");
+};
+
+console.log(isPalindrome("racecar")); 
+console.log(isPalindrome("hello"));  
+console.log(isPalindrome("Level"));   
 
 
