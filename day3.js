@@ -66,3 +66,14 @@ function max_number(number){
 console.log(max_number([20,10,30,47]));
 console.log(max_number([2,3,9,7]));
 console.log(max_number([20,-7,1,0,-15]));
+//6
+
+const toCapitalizer = (text) => {
+    return text.toUpperCase();
+};
+
+console.log(toCapitalizer("kigali"));
+console.log(toCapitalizer("hello word"));
+console.log(toCapitalizer("welcame to this page "));
+
+
