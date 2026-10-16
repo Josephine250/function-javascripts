@@ -66,7 +66,7 @@ function max_number(number){
 console.log(max_number([20,10,30,47]));
 console.log(max_number([2,3,9,7]));
 console.log(max_number([20,-7,1,0,-15]));
-//6
+//7
 
 const toCapitalizer = (text) => {
     return text[0].toUpperCase() + text.slice(1);
@@ -75,7 +75,7 @@ const toCapitalizer = (text) => {
 console.log(toCapitalizer("kigali"));
 console.log(toCapitalizer("hello"));
 console.log(toCapitalizer("welcame "));
-//7
+//8
 const countVowels = (text) => {
     let count = 0;
     text = text.toLowerCase();
@@ -99,7 +99,7 @@ console.log(countVowels("kigali"));
 console.log(countVowels("EDUCATION"));    
 console.log(countVowels("rhythm"));  
 
-//8
+//9
 const isPalindrome = (word) => {
     word = word.toLowerCase();
 
@@ -109,5 +109,55 @@ const isPalindrome = (word) => {
 console.log(isPalindrome("racecar")); 
 console.log(isPalindrome("hello"));  
 console.log(isPalindrome("Level"));   
+//10
+const repeatAction = (times, callback) => {
+    for (let i = 1; i <= times; i++) {
+        callback(i);
+    }
+};
 
+repeatAction(3, (round) => {
+    console.log("Round:", round);
+});
+//11
+const createCounter = (start = 0) => {
+    let count = start;
 
+    return {
+        increment: () => {
+            count++;
+        },
+
+        decrement: () => {
+            count--;
+        },
+
+        getValue: () => {
+            return count;
+        }
+    };
+};
+
+const counter = createCounter(5);
+
+console.log(counter.getValue());
+
+counter.increment();
+console.log(counter.getValue());
+
+counter.decrement();
+console.log(counter.getValue()); 
+
+//12
+const makeDiscount = (percent) => {
+    return (price) => {
+        return price - (price * percent / 100);
+    };
+};
+
+const discount10 = makeDiscount(10);
+const discount20 = makeDiscount(20);
+
+console.log(discount10(100)); // 90
+console.log(discount20(100)); // 80
+console.log(discount10(500)); // 450
