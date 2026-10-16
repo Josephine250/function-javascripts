@@ -52,3 +52,17 @@ const getGrade = (marks) =>{
 console.log (getGrade(70));
 console.log (getGrade(40));
 console.log (getGrade(-10));
+
+//6
+function max_number(number){
+        let max = number[0];
+        for ( let i = 0;i < number.length;i++){
+              if (number[i]> max){
+                max = number[i];
+              }
+        }
+        return max;
+}
+console.log(max_number([20,10,30,47]));
+console.log(max_number([2,3,9,7]));
+console.log(max_number([20,-7,1,0,-15]));
